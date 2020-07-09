@@ -2,37 +2,20 @@
 
 ![exoplanets.jpg](Images/exoplanets.jpg)
 
-### Before You Begin
-
-1. Create a new repository for this project called `machine-learning-challenge`. **Do not add this homework to an existing repository**.
-
-2. Clone the new repository to your computer.
-
-3. Give each model you choose their own Jupyter notebook, **do not use more than one model per notebook.**
-
-4. Save your best model to a file. This will be the model used to test your accuracy and used for grading.
-
-5. Commit your Jupyter notebooks and model file and push them to GitHub.
-
-## Note
-
-Keep in mind that this homework is optional! However, you will gain a much greater understanding of testing and tuning different Classification models if you do complete it.
-
 ## Background
 
 Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to discover hidden planets outside of our solar system.
 
-To help process this data, you will create machine learning models capable of classifying candidate exoplanets from the raw dataset.
+To help process this data,  machine learning models capable of classifying candidate exoplanets from the raw dataset are created in this project.
 
-In this homework assignment, you will need to:
-
+The steps are:
 1. [Preprocess the raw data](#Preprocessing)
 2. [Tune the models](#Tune-Model-Parameters)
 3. [Compare two or more models](#Evaluate-Model-Performance)
 
 - - -
 
-## Instructions
+## Process 
 
 ### Preprocess the Data
 
@@ -48,7 +31,16 @@ In this homework assignment, you will need to:
 
 ### Reporting
 
-* Create a README that reports a comparison of each model's performance as well as a summary about your findings and any assumptions you can make based on your model (is your model good enough to predict new exoplanets? Why or why not? What would make your model be better at predicting new exoplanets?).
+* This README reports a comparison of each model's performance as well as a summary about your findings and any assumptions you can make based on your model (is your model good enough to predict new exoplanets? Why or why not? What would make your model be better at predicting new exoplanets?).
+
+## Approach
+ 
+
+Raw light curves are constructed from the Kepler data.  Brightness values are adjusted to account for brightness variations due to the spacecrafts rotation.  These curves are processed into a more observable form and enables software to select signals that might be transit-like.  Any signal that shows potentila transit like features is calleda _threshold crossing event_.   These are tested and successful events are called KOIs (Kepler Objects of Interest). The next step is dispositioning - those that pass dispositioning are Kepler planet candidates. 
+
+Not all the planet candidates go through this process. Circumbinary planets do not show strictly periodic transits, and have to be inspected through other methods. In addition, third-party researchers use different data-processing methods, or even search planet candidates from the unprocessed light curve data. As a consequence, those planets may be missing KOI designation.  NOTE: These planets missing KOI designation are removed from the dataset. 
+
+
 
 - - -
 
